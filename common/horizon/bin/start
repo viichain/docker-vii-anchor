@@ -1,0 +1,17 @@
+#! /bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+while ! psql -U viichain -c 'select 1' horizon &> /dev/null ; do
+  echo "Waiting for postgres to be available..."
+  sleep 1
+done
+
+while ! vii-core --conf /opt/viichain/core/etc/vii-core.cfg http-command info &> /dev/null ; do
+  echo "Waiting for vii-core to be available..."
+  sleep 1
+done
+
+echo "starting horizon..."
+set -e
+exec $DIR/horizon
