@@ -2,12 +2,12 @@
 set -e
 
 # vii-core
-wget -O vii-core http://arthurzq.oicp.io:3501/vii-app/vii-core
+wget -O vii-core http://arthurzq.oicp.io:3356/vii-exec/vii-core
 mv vii-core /usr/bin
 chmod +x /usr/bin/vii-core
 
 # horizon
-wget -O vii-horizon http://arthurzq.oicp.io:3501/vii-app/vii-horizon
+wget -O vii-horizon http://arthurzq.oicp.io:3356/vii-exec/vii-horizon
 mv vii-horizon /usr/bin
 chmod +x /usr/bin/vii-horizon
 
