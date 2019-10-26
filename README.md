@@ -12,3 +12,9 @@ $ docker build -it vii/vii-anchor .
 
 # Run
 $ docker run -it -p "8000:8000" -p "11626:11626" -p "11625:11625" --name vii vii/vii-anchor
+
+# Config
+## Core
+core/etc/vii-core.cfg
+## Horizon
+common/horizon/etc/vii-horizon.env
